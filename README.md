@@ -1,6 +1,7 @@
 # Agilenizer [![Build Status](https://travis-ci.org/flyswatter/Agilenizer.svg?branch=master)](https://travis-ci.org/flyswatter/Agilenizer)
 ## A module for measuring skills
 
+[![NPM](https://nodei.co/npm/agilenizer.png)](https://npmjs.org/package/agilenizer)
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ![power bar graph](./images/power-graph.jpg)
