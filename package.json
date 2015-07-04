@@ -1,0 +1,17 @@
+{
+  "name": "Agilenizer",
+  "version": "1.0.0",
+  "description": "A tool for analyzing Agile sprint data to make team predictions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js && standard"
+  },
+  "author": "Dan Finlay",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "^4.0.0"
+  },
+  "dependencies": {
+    "lodash": "^3.10.0"
+  }
+}
