@@ -1,5 +1,5 @@
 {
-  "name": "Agilenizer",
+  "name": "agilenizer",
   "version": "1.0.0",
   "description": "A tool for analyzing Agile sprint data to make team predictions.",
   "main": "index.js",
