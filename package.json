@@ -4,11 +4,12 @@
   "description": "A tool for analyzing Agile sprint data to make team predictions.",
   "main": "index.js",
   "scripts": {
-    "test": "node test/index.js && standard"
+    "test": "node test/index.js | node_modules/tap-spec/bin/cmd.js && standard"
   },
   "author": "Dan Finlay",
   "license": "ISC",
   "devDependencies": {
+    "tap-spec": "^4.0.2",
     "tape": "^4.0.0"
   },
   "dependencies": {

@@ -8,29 +8,27 @@ test('can create identity', function (t) {
     dimensions: ['Android', 'iOS', 'UI', 'API']
   })
 
-  t.ok(person, 'msgs')
+  t.ok(person, 'returns object')
 
   var task = person.completed(['Android', 'UI'])
-  t.equal(task.has.Android, 1)
-  t.equal(task.has.UI, 1)
-  t.equal(task.has.iOS, 0)
-  t.equal(task.has.API, 0)
-
-  task = person.completed(['Android', 'API'])
-  t.equal(task.has.Android, 1)
-  t.equal(task.has.UI, 0)
-  t.equal(task.has.iOS, 0)
-  t.equal(task.has.API, 1)
-
-  // Even works with a string that only matches some dimensions:
-  task = person.completed('Android API Haha')
-  t.equal(task.has.Android, 1)
-  t.equal(task.has.UI, 0, 'Android UI should have no API')
-  t.equal(task.has.iOS, 0)
-  t.equal(task.has.API, 1)
+  t.equal(task.has.Android, 1, 'Android incremented')
+  t.equal(task.has.UI, 1, 'UI incremented')
+  t.equal(task.has.iOS, 0, 'iOS was not incremented')
+  t.equal(task.has.API, 0, 'API was not incremented')
 
   t.end()
+})
 
+test('identity.completed() accepts unformatted strings', function (t) {
+  var person = agilenizer.newIdentity({
+    name: 'Dan',
+    dimensions: ['Android', 'iOS', 'UI', 'API']
+  })
+
+  var task = person.completed('Android API Haha')
+  t.ok(task)
+
+  t.end()
 })
 
 test('identity.completed() influences odds predictably', function (t) {
