@@ -146,4 +146,3 @@ test('identity.velocityFor(query) returns velocity object', function (t) {
 
   t.end()
 })
-
