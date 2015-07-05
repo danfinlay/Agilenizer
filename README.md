@@ -57,6 +57,13 @@ By defining `dimensions` to track, `Agilenizer` can match for those in your task
   newPerson.load(json)
 ```
 
-## Roadmap
+### Velocity Tracking
 
- - Track skill progression, to highlight growth, and encourage working outside specialized domains.
+To help encourage growth in various skill areas, tracking improvement over time is supported.  Right now you can check the user's growth rate per task completed for a given query at any time like this:
+
+```javascript
+  var velocity = person.velocityFor('Android UI')
+  console.log("An average growth rate of " + velocity.avg)
+  console.log("Most recently, had an improvement of " + velocity.last)
+```
+

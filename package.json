@@ -15,7 +15,7 @@
     "lodash": "^3.10.0"
   },
   "repository": {
-    "type":"git",
-    "url":"https://github.com/flyswatter/Agilenizer"
+    "type": "git",
+    "url": "https://github.com/flyswatter/Agilenizer"
   }
 }
