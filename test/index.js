@@ -114,3 +114,32 @@ test('identity.load(json) deserializes json', function (t) {
 
   t.end()
 })
+
+test('identity.velocityFor(query) returns velocity object', function (t) {
+  var person = agilenizer.newIdentity({
+    name: 'Dan',
+    dimensions: ['Android']
+  })
+
+  // Training
+  person.completed(['Android'], {ratio: 1})
+
+  var nullVelocity = person.velocityFor('Android')
+  t.equal(nullVelocity.avg, 0, 'First velocity average is 0')
+  t.equal(nullVelocity.last, 0, 'first "last" velocity is 0')
+
+  person.completed(['Android'], {ratio: 1.1})
+
+  var firstVelocity = person.velocityFor('Android')
+  t.equal(firstVelocity.avg, 0.1, 'Average velocity is correct')
+  t.equal(firstVelocity.last, 0.1, 'Last velocity set')
+
+  person.completed(['Android'], {ratio: 1.25})
+
+  var secondVelocity = person.velocityFor('Android')
+  t.notEqual(secondVelocity.avg, 0.1, 'Average velocity changes')
+  t.equal(secondVelocity.last, 0.05, 'Last velocity updates')
+
+  t.end()
+})
+
