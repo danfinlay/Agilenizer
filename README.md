@@ -6,7 +6,7 @@
 
 ![power bar graph](./images/power-graph.jpg)
 
-Don't let the Agile methodology reduce your team to coarse and uninteresting indididual comparisons!
+Don't let the Agile methodology reduce your team to coarse and uninteresting individual comparisons!
 
 Rather than measuring how many "points" a person completes, or how much faster they tend to complete tasks, `Agilenizer` provides a statistical, skill-domain-driven analysis.
 
